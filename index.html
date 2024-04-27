@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stwaayl.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="crud">
+            <div class="head">
+                <h1 >Cruds Sys</h1>
+                <p>Market Managment <i class="fa-solid fa-shop"></i></p>
+                
+                <br>
+            </div>
+        </div>
+        <div class="iputs">
+            <input type="text" placeholder="title" id="title">
+            <div class="price">
+                <input type="number" id="price" placeholder="price" onkeyup="getTotal()">
+                <input type="number" id="taxes" placeholder="taxes" onkeyup="getTotal()">
+                <input type="number" id="ads" placeholder="ads" onkeyup="getTotal()">
+                <input type="number" id="discount" placeholder="discount" onkeyup="getTotal()">
+                <small id="total"></small>
+            </div>
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="Catagory" id="category">
+            <button id="submit">Create <i class="fa-solid fa-plus"></i></button>
+        </div>
+        <div class="outputs"> 
+            <div class="searchBlock">
+                <input type="text" id="search" placeholder="search" class="form-control w-100" onkeyup="searchData(this.value)">
+                <div class="btnsearch">
+                    <button id="searchTitle" onclick="GetsearchMood(this.id)">Search By Titile <i class="fa-brands fa-searchengin"></i></button>
+                    <button id="searchCat" onclick="GetsearchMood(this.id)">Search By Category <i class="fa-brands fa-searchengin"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="table-responsive">
+                <div id="deletAll" class="">
+
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Taxes</th>
+                            <th scope="col">ADS</th>
+                            <th scope="col">Discount</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Category</th>
+                            <th scope="col">Update</th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblc"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="js/co/main.js"></script>
+</body>
+</html> 
